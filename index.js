@@ -17,7 +17,7 @@ const answer = await inquirer.prompt([
         message: "Which operation you want to perform",
         type: "list",
         name: "operation",
-        choices: ["Addition", "Subtraction", "Multiplication", "Division"]
+        choices: ["Addition", "Subtraction", "Multiplication", "Division", "Modulus", "Exponential"]
     }
 ]);
 //console.log(result); 
@@ -32,6 +32,12 @@ else if (answer.operation === "Multiplication") {
 }
 else if (answer.operation === "Division") {
     console.log(answer.firstnumber / answer.secondnumber);
+}
+else if (answer.operation === "Modulus") {
+    console.log(answer.firstnumber % answer.secondnumber);
+}
+else if (answer.operation === "Exponential") {
+    console.log(answer.firstnumber ** answer.secondnumber);
 }
 else {
     console.log("Pls Give valid operations");
